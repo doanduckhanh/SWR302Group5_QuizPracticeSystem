@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Exam</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="moodle, Practice Exam"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="manifest" href="https://cmshn.fpt.edu.vn/admin/tool/mobile/mobile.webmanifest.php" />
+        <link rel="stylesheet" type="text/css" href="https://cmshn.fpt.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"/>
+        <script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+        <link rel="stylesheet" type="text/css" href="https://cmshn.fpt.edu.vn/theme/styles.php/trema/1597744132_1/all" />
+    </head>
+    <body id="page-mod-quiz-attempt" class="format-topics  path-mod path-mod-quiz chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam cmshn-fpt-edu-vn pagelayout-incourse course-3929 context-280099 cmid-142960 category-391">
+        <div id="page-wrapper">
+            <script type="text/javascript" src="https://cmshn.fpt.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://cmshn.fpt.edu.vn/lib/javascript.php/1566968257/lib/javascript-static.js"></script>
+            <div id="page" class="container-fluid">
+                <div id="page-content" class="row">
+                    <div id="region-main-box" class="col-12">
+                        <section id="region-main" class="has-blocks mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div role="main">
+                                        <span id="maincontent"></span>
+                                        <form action="quizhandle" method="post" enctype="multipart/form-data" accept-charset="utf-8" id="responseform">
+                                            <div id="q1" class="que multichoice deferredfeedback notyetanswered">
+                                                <div class="info">
+                                                    <h3 class="no">Question <span class="qno">1</span></h3>
+                                                    <div class="grade">Marked out of 1.00</div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="formulation clearfix">
+                                                        <div class="qtext">${quiz.quizname}</div>
+                                                        <div class="ablock">
+                                                            <div class="answer">
+                                                                <c:forEach items="${quiz.option}" var="o">
+                                                                    <div class="r0"><input type="radio" name="answer" value="${o}" id="q750374:1_answer0" /><label for="q750374:1_answer0" class="m-l-1"><span class="answernumber"></span><c:out value="${o}"/></label></div>
+                                                                </c:forEach>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="submitbtns">
+                                                <input type="submit" name="next" value="Next page" class="mod_quiz-next-nav btn btn-primary"/>
+                                            </div>
+                                            <input type="hidden" name="attempt" value="316590"/>
+                                            <input type="hidden" name="thispage" value="0" id="followingpage"/>
+                                            <input type="hidden" name="nextpage" value="1"/>
+                                            <input type="hidden" name="timeup" value="0" id="timeup"/>
+                                            <input type="hidden" name="sesskey" value="25xwySsF3r"/>
+                                            <input type="hidden" name="scrollpos" value="" id="scrollpos"/>
+                                            <input type="hidden" name="slots" value="1"/>
+                                        </form>
+                                    </div>
+                                </div>
+                        </section>
+                        <section data-region="blocks-column" class="d-print-none">
+                            <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip &lt;span id=&quot;mod_quiz_navblock_title&quot;&gt;Quiz navigation&lt;/span&gt;</a>
+                                <section id="mod_quiz_navblock" class=" block block__fake  card mb-3" role="navigation" data-block="_fake" aria-labelledby="instance-0-header">
+                                    <div class="card-body p-3">
+                                        <div class="card-text content mt-3">
+                                            <div class="qn_buttons clearfix multipages">
+                                                <a class="qnbutton notyetanswered free btn btn-secondary thispage" id="quiznavbutton1" title="Not yet answered" data-quiz-page="0" href="quizhandle?quizid=1">
+                                                    <span class="thispageholder"></span>
+                                                    <span class="trafficlight"></span>
+                                                    <span class="accesshide">Question</span>1
+                                                    <span class="accesshide"> This page <span class="flagstate"></span></span>
+                                                </a>
+                                                <a class="qnbutton notyetanswered free btn btn-secondary" id="quiznavbutton2" title="Not yet answered" data-quiz-page="1" href="quizhandle?quizid=1">
+                                                    <span class="thispageholder"></span>
+                                                    <span class="trafficlight"></span>
+                                                    <span class="accesshide">Question </span>2
+                                                    <span class="accesshide"> <span class="flagstate"></span></span>
+                                                </a>
+                                                <div class="othernav">
+                                                    <a class="endtestlink" href="https://cmshn.fpt.edu.vn/mod/quiz/summary.php?attempt=316590&amp;cmid=142960">Finish attempt ...</a>
+                                                    <div id="quiz-timer" role="timer" aria-atomic="true" aria-relevant="text">Time left
+                                                        <span id="quiz-time-left"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="footer"></div>
+                                            </div>
+                                        </div>
+                                </section>
+                            </aside>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
