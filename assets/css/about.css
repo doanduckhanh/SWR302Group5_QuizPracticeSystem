@@ -1,0 +1,7 @@
+.btn{
+    background-color: var(--bs-blue) !important;
+    border: var(--bs-blue) !important;
+}
+.img-mem{
+    margin: auto;
+}
