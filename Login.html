@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="assets/css/stylelogin.css">
+    </head>
+    <body>
+        <div class="main">
+            <!-- Sign up form -->
+            <section class="signup">
+                <div class="container">
+                    <div class="signup-content">
+                        <div class="signup-form">
+                            <h2 class="form-title">Log in</h2>
+                            <form action="register" method="POST" class="register-form" id="register-form">                              
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="pass" id="pass" placeholder="Password" />
+                                </div>  
+                                <div class="form-group">
+                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>Remember Password</label>
+                                    <p> <a  href="#" class="term-service">Forgot password</a></p>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" id="signup" class="form-submit" value="Login" />
+                                </div>
+                                <p> <a  href="#" class="term-service">Sign up</a></p>
+                                
+                            </form>
+                        </div>
+                        <div class="signup-image">
+                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>         
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- JS -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/js/mainlogin.js"></script>
+
+    </body>
+</html>
