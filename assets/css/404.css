@@ -1,0 +1,23 @@
+#layoutError {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #layoutError #layoutError_content {
+    min-width: 0;
+    flex-grow: 1;
+  }
+  #layoutError #layoutError_footer {
+    min-width: 0;
+  }
+  .img-error {
+    max-width: 20rem;
+    margin: auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  a{
+      text-decoration: none;
+  }

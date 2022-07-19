@@ -1,0 +1,31 @@
+@import url(variable.css);
+
+.btn{
+    border: none;
+}
+.list_view{
+    background-color: var(--bs-blue);
+}
+.list_edit{
+    background-color: var(--bs-green);
+}
+.list_deactive{
+    background-color: var(--bs-orange);
+}
+.list_active{
+    background-color: var(--bs-success);
+}
+.list_delete{
+    background-color: var(--bs-red);
+}
+.ques_option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.form-control{
+    margin-left: 10px;
+}
+.opt_dot{
+    font-size: 12px;
+}
