@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Blog Post</title> 
+        <!-- Core theme CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <style >
+            .-col-md-4{align-content: center}
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container">
+                <a href="home" class="navbar-brand">Quiz Practice</a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div style="margin-left: 750px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">Log Out</a>
+                    </li>
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">Sign in</a>
+                </li>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Login -->
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="login" method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" value="${email}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required="" autofocus="">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" value="${pass}" class="form-control" id="exampleInputPassword1" name="pass" required="">
+                                <div class="form-text"><a href="resetpass.jsp" style="color: black; font-size: 14px;">Forgot Password?</a></div>
+                            </div>
+                            <div></div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="rememberme">
+                                <label class="form-check-label" for="exampleCheck1">Remember me</label><br>
+                            </div>
+                            <input type="submit" value="Login" class="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign up -->
+        <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="register" method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputfirstname" class="form-label">Full Name</label>
+                                <input type="text" name="name" class="form-control" id="exampleInputFirstName" required="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputGender" class="form-label">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" value="1" name="gender" id="flexRadioDefault1"/>
+                                <label class="form-check-label" for="flexRadioDefault1"> Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" value="0" name="gender" id="flexRadioDefault1"/>
+                                <label class="form-check-label" for="flexRadioDefault1"> Female </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Phone</label>
+                                <input type="phone" name="phone" class="form-control" required="">
+                                <div id="emailHelp" class="form-text">Phone number will not be able to change after the account is created successfully</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Address</label>
+                                <input type="text" name="address" class="form-control" required="">
+                                <div id="emailHelp" class="form-text">Address number will not be able to change after the account is created successfully</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Password</label>
+                                <input type="password" name="pass" class="form-control" id="exampleInputPassword" required="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Repeat Password</label>
+                                <input type="password" name="repass" class="form-control" id="exampleInputPassword" required="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Verify Code</label>
+                                <input type="text" name="verify" class="form-control" id="exampleInputPassword" required="">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Change Password -->
+        <div class="modal fade" id="changepassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Current password</label>
+                                <input type="password" value="" class="form-control" id="current_password" name="currentpass"  autofocus="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">New Password</label>
+                                <input type="password" value="" class="form-control" id="password" name="newpass" required="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Confirm New Password</label>
+                                <input type="password" value="" class="form-control" id="confirm_password" name="confirmpass" required="">
+                            </div>
+                            <input type="submit" value="Save" class="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="container" style="margin-top: 30px;padding-top: 30px "> 
+            <div class="container mt-5">         
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Post content-->
+                        <article>
+                            <!-- Post header-->
+                            <header class="mb-4">
+                                <!-- Post title-->
+                                <h1 class="fw-bolder mb-1">Quiz Practice System</h1>
+                                <!-- Post meta content-->
+                                <div class="text-muted fst-italic mb-2">Posted on by </div>
+                                <!-- Post categories-->
+
+                            </header>
+                            <!-- Preview image figure-->
+                            <figure class="mb-4"><img class="img-fluid rounded" src="data:image/jpeg;base64,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" alt="..." /></figure>
+                            <!-- Post content-->
+
+
+                            <h2>Information of Subject...</h2>
+                            <button>View</button>
+                            <button>Edit</button>
+                            <button></button>
+                            <section class="mb-5">
+                                <p class="fs-5 mb-4"></p>
+                            </section>
+                        </article>
+                        <!-- Comments section-->
+                    </div>
+                    <!-- Side widgets-->
+                    <div class="col-lg-4">
+                        <!-- Categories widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Categories</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Side Widget</div>
+                            <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footerap core JS-->
+        <div class="row" style="margin-left: 100px">
+            <div class="col-md-4">
+                <h4>About us</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, voluptatem ad ab, dolores, eligendi molestias officiis repellendus voluptatibus deserunt consequuntur ducimus. Nobis quis ex, numquam voluptatum deserunt at iure repudiandae.</li>
+                </ul>
+            </div>
+            <div class="-col-md-4">
+                <h4>contact</h4>
+                <ul>
+                    <li><a href="#"><i class=""></i> <br>
+                            Thạch Hòa - Thạch Thất - Hà Nội</a></li>
+                    <li><a href="#"><i class=""></i> <br>
+                            (024)123.456.78</a></li>
+                    <li><a href="#"><i class=""></i> <br>
+                            SWPGroup5@fpt.edu.vn</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4" style="margin-left: 50px">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook-f">Facebook.com</i></a> </br>
+                    <a href="https://www.youtube.com"><i class="fab fa-linkedin-in">youtube</i></a></br>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram-square">Instagram</i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
